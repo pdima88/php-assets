@@ -1,0 +1,20 @@
+{
+    "name": "pdima88/php-assets",
+    "description": "Small asset manager for PHP",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Puchkin Dmitriy",
+            "email": "pdima88@mail.ru"
+        }
+    ],
+    "require": {
+        "php": ">=5.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "pdima88\\php\\": "/"
+        }
+    } 
+}
