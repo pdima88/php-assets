@@ -43,8 +43,15 @@ class Assets {
      * @param $assets string|array Asset(s) to include to page output
      */
     static function add($assets) {
-
         self::getInstance()->addFromArray($assets);
+    }
+
+    static function addScript($script, $scriptId = null) {
+        self::getInstance()->script($script, $scriptId);
+    }
+
+    static function addStyle($style, $selector = null) {
+        self::getInstance()->style($style, $selector);
     }
 
     private static $_instance = null;
@@ -187,7 +194,7 @@ class Assets {
      * @param $script string js code
      * @param $scriptId string|null Unique js code identifier to omit repeated inclusion
      */
-    function addScript($script, $scriptId = null) {
+    function script($script, $scriptId = null) {
         if (!isset($scriptId) || !isset($this->_scriptIds[$scriptId])) {
             $this->_scripts[] = $script;
             if (isset($scriptId)) $this->_scriptIds[$scriptId] = true;
@@ -238,7 +245,7 @@ class Assets {
      * @param $selector string|null CSS selector, required if CSS style code contains only css rules,
      *  and must be null if css style code already contains selector
      */
-    function addStyle($style, $selector = null) {
+    function style($style, $selector = null) {
         if (!$selector) {
             if (!isset($this->_styles[''])) $this->_styles[''] = '';
             else $this->_styles[''] .= PHP_EOL;
