@@ -298,7 +298,7 @@ class Assets {
  * $style->save('span.required');
  * ```
  */
-class Style implements ArrayAccess {
+class Style implements \ArrayAccess {
     static protected $_cssIndex = [];
     static protected $_classes = [];
 
