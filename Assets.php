@@ -232,7 +232,7 @@ class Assets {
                 $css[$prop] = $val;
             }
             return $css->css();
-        } elseif (is_a($style, 'Css')) {
+        } elseif (is_a($style, '\\pdima88\\php\\Style')) {
             return $style->css();
         }
         return $style.PHP_EOL;
