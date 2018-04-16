@@ -1,5 +1,5 @@
 {
-    "name": "pdima88/php-assets",
+    "name": "s4y/assets",
     "description": "Small asset manager for PHP",
     "type": "library",
     "license": "MIT",
@@ -14,7 +14,7 @@
     },
     "autoload": {
         "psr-4": {
-            "pdima88\\php\\": "/"
+            "s4y\\": "/"
         }
     } 
 }

@@ -1,15 +1,15 @@
 <?php
 
-namespace pdima88\php;
+namespace s4y;
 
 /**
  * Small asset manager for PHP v1.0
- * (https://github.com/pdima88/php-assets)
+ * (https://github.com/site4y/assets)
  *
  * Copyright 2017-2018 Puchkin Dmitriy
  *
  * Licensed under MIT
- * (https://github.com/pdima88/php-assets/blob/master/LICENSE)
+ * (https://github.com/site4y/assets/blob/master/LICENSE)
  */
 
 class Assets {
@@ -232,7 +232,7 @@ class Assets {
                 $css[$prop] = $val;
             }
             return $css->css();
-        } elseif (is_a($style, '\\pdima88\\php\\Style')) {
+        } elseif (is_a($style, '\\s4y\\Style')) {
             return $style->css();
         }
         return $style.PHP_EOL;
