@@ -127,7 +127,7 @@ class Assets {
             } else {
                 if (isset(self::$libs[$asset])) {
                     $this->addLib($asset);
-                } elseif (substr($asset, -4) == '.css') {
+                } elseif (substr($asset, -4) == '.css' || strpos($asset,'.css?v=') !== false) {
                     $this->addCss($asset);
                 } else {
                     $this->addJs($asset);
